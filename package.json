@@ -1,0 +1,24 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "automated testing",
+  "main": "spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmdusang/selenium_node_tests.git"
+  },
+  "author": "dmdusang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmdusang/selenium_node_tests/issues"
+  },
+  "homepage": "https://github.com/dmdusang/selenium_node_tests#readme",
+  "dependencies": {
+    "chromedriver": "^2.29.0",
+    "mocha": "^3.4.2",
+    "selenium-webdriver": "^3.4.0"
+  }
+}

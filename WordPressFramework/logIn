@@ -1,0 +1,33 @@
+var selenium = require('selenium-webdriver');
+var By = selenium.By;
+
+
+
+var User = function(username, password, driver, url){
+	this.username = username;
+	this.password = password;
+	this.driver = driver;
+	this.url = url;
+}
+
+
+User.prototype.setUsername = function(){
+
+	return this.driver.findElement(By.id('user_login')).sendKeys(this.username);
+}
+
+User.prototype.setPassword = function(){
+	return this.driver.findElement(By.id('user_pass')).sendKeys(this.password);
+
+}
+
+User.prototype.login = function(){
+	return this.driver.findElement(By.id('wp-submit')).click();
+}
+
+User.prototype.visit = function(){
+	this.driver.get(this.url);
+	return selenium.promise.fulfilled(true);
+}
+
+module.exports = User;
